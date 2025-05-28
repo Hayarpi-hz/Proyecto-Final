@@ -1,14 +1,11 @@
-import './assets/main.css'
+import { createApp } from "vue";
+import { createPinia } from "pinia";
+import "./style.css";
+import App from "./App.vue";
+import router from "./router";
+import piniaPluginPersistedState from "pinia-plugin-persistedstate";
 
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
+const pinia = createPinia();
+pinia.use(piniaPluginPersistedState);
 
-import App from './App.vue'
-import router from './router'
-
-const app = createApp(App)
-
-app.use(createPinia())
-app.use(router)
-
-app.mount('#app')
+createApp(App).use(router).use(pinia).mount("#app");
