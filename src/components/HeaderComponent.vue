@@ -2,7 +2,7 @@
 
 <template>
   <header class="header">
-    <h1 class="title">Notes Page</h1>
+    <h1 class="title">I want it, I make it</h1>
     <nav>
       <ul class="nav-list">
         <li>
@@ -10,6 +10,9 @@
         </li>
         <li>
           <router-link to="/notes" class="link">Notes</router-link>
+        </li>
+        <li>
+          <router-link to="/about" class="link">About</router-link>
         </li>
       </ul>
     </nav>
@@ -42,10 +45,6 @@
   justify-content: center;
   gap: 30px; /* Espaciado uniforme entre enlaces */
   flex-wrap: wrap;
-}
-
-.nav-list li {
-  display: inline;
 }
 
 .nav-list .link {

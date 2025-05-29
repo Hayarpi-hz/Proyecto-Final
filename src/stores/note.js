@@ -25,4 +25,6 @@ export const useNoteStore = defineStore(
   {
     persist: true,
   }
+
+  // habría que quitar lo de persist una vez que instalemos la appi
 );
