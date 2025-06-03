@@ -30,9 +30,13 @@ import HeaderComponent from '../components/HeaderComponent.vue';
 
 .diy-text {
   font-family: 'Arial', sans-serif;
-  font-size: 3rem;
-  color: #333; /* Cambia el color según tu diseño */
+  font-size: 5rem;
+  color: #333;
   margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  border: 2px solid #000;
+  padding: 10px;
+  transform: skewX(-10deg);
 }
 
 .diy-logo {

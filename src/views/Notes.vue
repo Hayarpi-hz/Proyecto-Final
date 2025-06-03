@@ -3,8 +3,13 @@ import NoteCard from "@/components/NoteCard.vue";
 import HeaderComponent from "../components/HeaderComponent.vue";
 import { useNoteStore } from "../stores/note";
 import CreateNote from "@/components/CreateNote.vue";
+import { onMounted } from "vue";
 
 const noteStore = useNoteStore();
+
+onMounted(async () => {
+  await noteStore.getNotes();
+});
 </script>
 
 <template>
@@ -12,7 +17,9 @@ const noteStore = useNoteStore();
   <section id="notes-page">
     <h2>Notes</h2>
 
-    <ul class="note-list">
+    <h2 v-if="noteStore.loading">Cargando...</h2>
+    <h2 v-else-if="noteStore.error">Algo ha ido mal, como no he pagado la API tienes que recordarme que la vuelva a añadir, porque se han acabado los clics gratuitos.</h2>
+    <ul v-else class="note-list">
       <li><CreateNote /></li>
       <li v-for="note in noteStore.notes" :key="note.id" class="note">
         <NoteCard :note="note"></NoteCard>
@@ -48,10 +55,12 @@ body {
   list-style-type: none;
   padding: 20px; /* Espacio alrededor de las notas */
   margin: 0 auto;
-  max-width: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 70%;
+  min-width: 450px;
+  max-width: 500px;
 }
 
 .note {
