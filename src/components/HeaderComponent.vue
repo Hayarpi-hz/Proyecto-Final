@@ -14,6 +14,9 @@
         <li>
           <router-link to="/about" class="link">About</router-link>
         </li>
+        <li>
+          <router-link to="/order" class="link">Order</router-link>
+        </li>
       </ul>
     </nav>
   </header>
