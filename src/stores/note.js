@@ -51,12 +51,26 @@ error.value = true;
       // });
     };
 
+     const removeNote = async (note) => {
+    try {
+      await fetch(`${API_URL}/${note.id}`, {
+        method: "DELETE",
+      });
+
+      // Actualizar la lista de notas después de eliminar
+      notes.value = notes.value.filter(n => n.id !== note.id);
+    } catch (e) {
+      error.value = true;
+    }
+  };
+
     return {
       notes,
       loading,
       error,
       getNotes,
       addNote,
+      removeNote,  // Asegúrate de retornar el método removeNote para utilizarlo en tus componentes
     };
   }
   // {

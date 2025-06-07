@@ -90,4 +90,8 @@ body {
   line-height: 1.6;
   color: #666;
 }
+
+.empty-msg {
+  text-align: center;
+}
 </style>

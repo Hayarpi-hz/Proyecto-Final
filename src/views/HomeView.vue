@@ -1,22 +1,17 @@
 <script setup>
-import HeaderComponent from '../components/HeaderComponent.vue';
-
- 
-
+import HeaderComponent from "../components/HeaderComponent.vue";
 </script>
 
 <template>
-<HeaderComponent />
-<div class="logo-container">
+  <HeaderComponent />
+  <div class="logo-container">
     <!-- Aquí puedes utilizar una imagen si tienes un logo gráfico -->
     <!-- <img src="../assets/logo.png" alt="DIY Logo" class="diy-logo" /> -->
-    
+
     <!-- Texto de tu logo -->
     <h1 class="diy-text">I want it, I make it</h1>
   </div>
-
 </template>
-
 
 <style scoped>
 .logo-container {
@@ -29,7 +24,7 @@ import HeaderComponent from '../components/HeaderComponent.vue';
 }
 
 .diy-text {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   font-size: 5rem;
   color: #333;
   margin: 0;

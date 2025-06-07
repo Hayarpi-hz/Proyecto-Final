@@ -24,7 +24,7 @@
 
 <style>
 .header {
-  background-color: #3a3a3a;
+  background-color: #3e2f3e;
   padding: 20px;
   display: flex;
   flex-direction: column;

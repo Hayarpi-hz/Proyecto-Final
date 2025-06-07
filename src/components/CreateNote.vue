@@ -9,6 +9,10 @@ const handleSubmit = () => {
   title.value = "";
 };
 
+const handleDelete = () => {
+  noteStore.removeNote(note);
+};
+
 const title = ref("");
 </script>
 
@@ -36,28 +40,41 @@ const title = ref("");
   padding: 15px;
   margin-bottom: 20px;
   width: 200px;
-}
+  justify-content: space-between;
+  transition: all 0.2s;
 
-.note-title {
-  font-size: 1.5em;
-  color: #333;
-  width: 100%;
-  box-sizing: border-box; /* Asegura que el ancho incluya padding y border */
-  margin-bottom: 10px; /* Espacio entre input y botón */
-  padding: 5px;
-}
+  .note-title {
+    font-size: 1.5em;
+    color: #333;
+    width: 100%;
+    box-sizing: border-box; /* Asegura que el ancho incluya padding y border */
+    margin-bottom: 10px; /* Espacio entre input y botón */
+    padding: 5px;
+    border: none;
+    background-color: transparent;
+  }
 
-.create-btn {
-  background-color: #333;
-  color: #ffffff;
-  border: none;
-  border-radius: 4px;
-  padding: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
+  .create-btn {
+    background-color: #852a95;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: justify;
+  }
 
-.create-btn:hover {
-  background-color: #ffcc00;
+  .create-btn:hover {
+    background-color: #a36b9d;
+  }
+
+  .create-btn:active {
+    background-color: lightyellow;
+  }
+}
+.note-form:hover {
+  border: 3px solid black;
+  box-shadow: 0 0 10px;
 }
 </style>
