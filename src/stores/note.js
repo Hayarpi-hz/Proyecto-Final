@@ -36,6 +36,9 @@ export const useNoteStore = defineStore(
       try {
         await fetch (API_URL, {
           method: "POST",
+          headers: {
+    "Content-Type": "application/json"
+  },
           body: JSON.stringify(newNote)
 })
 

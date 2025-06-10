@@ -4,6 +4,7 @@ import HeaderComponent from "../components/HeaderComponent.vue";
 import { useNoteStore } from "../stores/note";
 import CreateNote from "@/components/CreateNote.vue";
 import { onMounted } from "vue";
+import FooterComponent from "@/components/FooterComponent.vue";
 
 const noteStore = useNoteStore();
 
@@ -29,6 +30,7 @@ onMounted(async () => {
       </li>
     </ul>
   </section>
+  <FooterComponent />
 </template>
 
 <style>

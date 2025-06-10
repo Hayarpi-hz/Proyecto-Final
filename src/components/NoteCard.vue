@@ -17,7 +17,7 @@ defineProps({
   width: 400px;
   background-color: lightyellow;
   border: 3px solid #000022;
-  padding: 20px 30px;
+  padding: 10px 30px;
   display: flex;
   justify-content: space-between;
   transition: all 0, 2s;
@@ -33,11 +33,11 @@ defineProps({
   }
 }
 .note-card:hover {
-  border: 3px solid black;
+  border: 2px solid black;
   box-shadow: 0 0 10px;
 }
 .note-card:has(input:checked) {
-  border: 3px solid lightgray;
+  border: 2px solid lightgray;
   background-color: lightgray;
 
   .card-title {

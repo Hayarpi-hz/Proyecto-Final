@@ -1,4 +1,5 @@
 <script setup>
+import FooterComponent from "@/components/FooterComponent.vue";
 import HeaderComponent from "../components/HeaderComponent.vue";
 </script>
 
@@ -11,6 +12,7 @@ import HeaderComponent from "../components/HeaderComponent.vue";
     <!-- Texto de tu logo -->
     <h1 class="diy-text">I want it, I make it</h1>
   </div>
+  <FooterComponent />
 </template>
 
 <style scoped>
