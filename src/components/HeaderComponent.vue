@@ -8,10 +8,10 @@ defineProps({
 <template>
   <header class="header">
     <div class="logo-container">
-      <img src="@/assets/I want it, I make it.png" alt="Logo" class="logo" />
+      <img src="@/assets/logoIwant.png" alt="Logo" class="logo" />
     </div>
     <div class="title-container">
-      <h1 class="title">I want it, I make it</h1>
+      
     </div>
     <nav>
       <ul class="nav-list">
@@ -35,25 +35,30 @@ defineProps({
 <style>
 .header {
   background-color: #3e2f3e;
-  padding: 20px;
+  padding-right: 30px;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Espacio entre el logo y el resto */
-  width: 100%;
+  justify-content: space-between;
+  /* Espacio entre el logo y el resto */
 }
 
 .logo-container {
-  flex: 0 0 auto; /* Solo toma el espacio requerido por el logo */
+  flex: 1 0 160px;
+  /* Solo toma el espacio requerido por el logo */
 }
 
 .title-container {
-  flex: 1; /* Permite que el título ocupe el espacio restante */
-  text-align: center; /* Centra el título */
+  flex: 1;
+  /* Permite que el título ocupe el espacio restante */
+  text-align: center;
+  /* Centra el título */
 }
 
 
 .logo {
-  width: 80px; /* Tamaño del logo */
+  width: 100%;
+  max-width: 160px;
+  /* Tamaño del logo */
   height: auto;
 }
 
@@ -62,8 +67,10 @@ defineProps({
   padding: 0;
   margin: 20px 0 0;
   display: flex;
-  justify-content: center; /* Centra los enlaces del nav */
-  gap: 30px; /* Espaciado uniforme entre enlaces */
+  justify-content: center;
+  /* Centra los enlaces del nav */
+  gap: 30px;
+  /* Espaciado uniforme entre enlaces */
   flex-wrap: wrap;
 }
 

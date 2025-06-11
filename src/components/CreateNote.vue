@@ -5,12 +5,10 @@ import { ref } from "vue";
 const noteStore = useNoteStore();
 
 const handleSubmit = () => {
+  // si el usuario no ha introducido nada en el campo de nueva nota no hacer nada
+  if (!title.value) return
   noteStore.addNote(title.value);
   title.value = "";
-};
-
-const handleDelete = () => {
-  noteStore.removeNote(note);
 };
 
 const title = ref("");
@@ -23,6 +21,7 @@ const title = ref("");
       class="note-title"
       placeholder="Nueva Nota"
       v-model="title"
+      name="new-note"
     />
     <button class="create-btn">+</button>
   </form>
@@ -52,6 +51,7 @@ const title = ref("");
     padding: 5px;
     border: none;
     background-color: transparent;
+    text-align: center;
   }
 
   .create-btn {
