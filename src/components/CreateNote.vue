@@ -27,54 +27,59 @@ const title = ref("");
   </form>
 </template>
 
-<style>
+<style scoped>
 .note-form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: rgba(245, 245, 235, 0.9); /* Suaviza el color de fondo */
+  border: none;
+  border-radius: 5px; /* Hacer los bordes menos pronunciados */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Suaviza la sombra */
   padding: 15px;
   margin-bottom: 20px;
-  width: 200px;
+  width: 250px;
   justify-content: space-between;
   transition: all 0.2s;
-
-  .note-title {
-    font-size: 1.5em;
-    color: #333;
-    width: 100%;
-    box-sizing: border-box; /* Asegura que el ancho incluya padding y border */
-    margin-bottom: 10px; /* Espacio entre input y botón */
-    padding: 5px;
-    border: none;
-    background-color: transparent;
-    text-align: center;
-  }
-
-  .create-btn {
-    background-color: #852a95;
-    color: #ffffff;
-    border: none;
-    border-radius: 4px;
-    padding: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    text-align: justify;
-  }
-
-  .create-btn:hover {
-    background-color: #a36b9d;
-  }
-
-  .create-btn:active {
-    background-color: lightyellow;
-  }
 }
+
+.note-title {
+  font-size: 1em;
+  color: #5a4a3f; /* Un marrón suave que calza con los tonos tierra */
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #d2b48c; /* Cambiado a un color beige tenue */
+  border-radius: 5px;
+  background-color: #fff8e7; /* Fondo de un beige claro */
+  text-align: center;
+  transition: border-color 0.3s ease;
+}
+
+.note-title:focus {
+  border-color: #bfa07a; /* Un tono tierra más grisáceo al enfocar */
+}
+
+.create-btn {
+  background-color: #8b6f61; /* Marrón tierra suave */
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.create-btn:hover {
+  background-color: #bfa07a; /* Color al pasar el mouse por encima */
+}
+
+.create-btn:active {
+  background-color: #d2b48c; /* Color al hacer clic */
+}
+
 .note-form:hover {
-  border: 3px solid black;
-  box-shadow: 0 0 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Suavizar más la sombra */
 }
 </style>

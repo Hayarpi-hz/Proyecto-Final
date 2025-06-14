@@ -34,13 +34,21 @@ defineProps({
 
 <style>
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Asegúrate de que el z-index sea suficiente para estar por encima de otros elementos */
   background-color: #3e2f3e;
-  padding-right: 30px;
+  padding-right: 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* Espacio entre el logo y el resto */
+  margin: 0px;
 }
+
+.content {
+  padding-top: 60px; /* Ajusta según la altura de tu header */
+}
+
 
 .logo-container {
   flex: 1 0 160px;

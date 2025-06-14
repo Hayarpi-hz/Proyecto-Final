@@ -5,10 +5,10 @@ import OrderComponent from "@/components/Order/OrderComponent.vue";
 </script>
 
 <template>
-  <div class="view-container">
+  <div class="view-container" id="order">
     <HeaderComponent />
     <main class="view-content">
-      <h2>Your Orders</h2>
+      <OrderComponent />
       <!-- Aquí podría ir más contenido relativo -->
     </main>
     <FooterComponent />
@@ -17,6 +17,14 @@ import OrderComponent from "@/components/Order/OrderComponent.vue";
 
 
 <style>
+#order {
+  margin: 0;
+  background: linear-gradient(
+    135deg,
+    #f5f5dc,
+    #e0cda9
+  ); /* Gradiente de colores beige y tierra */
+}
 .view-container {
   display: flex;
   flex-direction: column;

@@ -4,7 +4,7 @@ import HeaderComponent from "../components/HeaderComponent.vue";
 </script>
 
 <template>
-  <div class="page-container">
+  <div class="page-container" id="about">
     <HeaderComponent />
 
     <main class="content">
@@ -12,31 +12,28 @@ import HeaderComponent from "../components/HeaderComponent.vue";
         <h2>Acerca de Mí</h2>
 
         <p>
-          ¡Hola! Soy Hayarpi, apasionado/a por el DIY. Me encanta [actividad
-          relevante o interés] y he dedicado [número de años o tiempo] en
-          perfeccionar mis habilidades en [habilidad o campo específico].
+          ¡Hola! Soy Hayarpi, apasionada por el DIY. Me encanta crear cosas y regalar 
+          a mis amigos cosas hechas por mí. 
         </p>
         <p>
-          He creado esta página porque me gusta hacerlo todo yo. Aquí pueden
-          pedirme tareas para poder ayudarles a coser y crear piezas únicas
-          juntos. ¡Estoy emocionado de trabajar contigo!
+          Cuando no estoy trabajando, puedes encontrarme en el gym o en casa 
+          peleándome con la máquina de coser o haciendo cualquier otro proyecto DIY.
         </p>
 
         <p>
-          Mi misión es [tu misión personal o profesional]. Me enorgullece [logro
-          personal o profesional].
+          Caundo a mis amigos se les descose un vestido, o quieren arreglar algo, siempre 
+          que eso lo puedo hacer yo. 
+          
         </p>
 
         <p>
-          Cuando no estoy [actividad principal], puedes encontrarme [hobby o
-          actividad secundaria]. ¡Siempre estoy buscando nuevas formas de
-          conectar y compartir mi amor por [campo o interés]!
+          Así que con esta página, si a ti también te pasa y tienes cosas que quieres 
+          arreglar o crear, puedes pedirme que te ayude. 
         </p>
 
         <p>
           Si quieres saber más o tienes alguna pregunta, no dudes en contactarme
-          a través de [método de contacto, como correo electrónico o redes
-          sociales].
+          a través de mi instagram. 
         </p>
       </div>
     </main>
@@ -56,31 +53,26 @@ import HeaderComponent from "../components/HeaderComponent.vue";
   flex: 1; /* Toma el espacio restante entre el header y el footer */
 }
 
-body {
+#about {
   font-family: "Arial", sans-serif;
   margin: 0;
   background-size: cover;
   background-attachment: fixed;
-  background-image: url("https://img.freepik.com/foto-gratis/arreglo-plano-panos-colores-pigmentos-naturales_23-2148734441.jpg?semt=ais_items_boosted&w=740"); /* Imagen de fondo temática */
+  background-image: url("https://img.freepik.com/foto-gratis/arreglo-plano-panos-colores-pigmentos-naturales_23-2148734441.jpg?semt=ais_items_boosted&w=740");
 }
 
 .about-container {
-  background-color: rgba(
-    245,
-    245,
-    220,
-    0.85
-  ); /* Fondo cálido y semi-transparente */
+  background-color: rgba(245, 245, 220, 0.85);
   max-width: 800px;
   margin: auto;
   padding: 30px;
   margin-top: 20px;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para elevar el texto */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-  color: #8b4513; /* Marrón cálido */
+  color: #3e2f3e; /* Marrón consistente con el estilo del botón en OrderComponent */
   text-align: center;
 }
 
@@ -88,7 +80,7 @@ p {
   color: #333;
   padding: 15px;
   margin: 20px 0;
-  border: 2px dashed #d2b48c; /* Borde simulando puntada de costura */
+  border: 2px dashed #d2b48c;
   border-radius: 5px;
   background-color: #fffaf0;
 }

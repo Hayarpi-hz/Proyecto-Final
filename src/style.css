@@ -1,10 +1,16 @@
+/* Aplica la fuente Montserrat a todos los elementos */
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Ya existentes en tu archivo */
 body {
-    margin: 0;
+  margin: 0;
+  padding: 0;
 }
 
 ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
