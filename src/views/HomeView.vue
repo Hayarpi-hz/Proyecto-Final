@@ -35,21 +35,19 @@ import HeaderComponent from "../components/HeaderComponent.vue";
 
 <style scoped>
 #home {
-  font-family: "Arial", sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin: 0;
-  background: linear-gradient(
-    135deg,
-    #f5f5dc,
-    #e0cda9
-  ); /* Gradiente de colores beige y tierra */
+  background: linear-gradient(135deg, #f5f5dc, #e0cda9);
+  min-height: 100vh; /* Asegura que ocupe el 100% de la página */
 }
 
 .logo-container {
   display: flex;
-  flex-direction: column; /* Para alinear el texto e imagen verticalmente */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Ocupa toda la altura de la página */
+  height: auto;
+  padding: 20px;
   text-align: center;
 }
 
@@ -57,20 +55,17 @@ import HeaderComponent from "../components/HeaderComponent.vue";
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50vh; /* Ajustar según necesidad */
-  text-align: center;
+  padding: 40px 20px;
   background: linear-gradient(135deg, #f5f5dc, #e0cda9);
+  width: 100%;
 }
 
 .diy-text {
-  font-family: "Montserrat", sans-serif;
-  font-size: 5rem;
+  font-size: clamp(2rem, 5vw, 5rem); /* Ajuste dinámico de tamaño de fuente */
   color: #333;
   margin: 0;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  border: 2px solid #000;
   padding: 10px;
-  transform: skewX(-10deg);
   animation: slideIn 1s ease-in-out;
 }
 
@@ -90,24 +85,28 @@ import HeaderComponent from "../components/HeaderComponent.vue";
 
 .photo-gallery {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  flex-wrap: wrap;
   margin: 40px 0;
   gap: 20px;
+  padding: 10px;
 }
 
 .gallery-photo {
-  max-width: 340px; /* Ajustar tamaño según preferencia */
-  width: 100%;
+  flex: 1 1 300px; /* Ajusta el tamaño para que sea responsivo */
+  max-width: 340px;
   height: auto;
   border-radius: 10px;
 }
 
 .media-section {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   margin: 40px 0;
   gap: 20px;
+  padding: 20px;
 }
 
 .media-image img {
